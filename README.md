@@ -316,7 +316,7 @@ perez987. The guide is a bit confusing to navigate through, but the key points a
 
 ### ⚠️ Partially Working
 - \_Qxx EC Query not firing after sleep, caused FN Hotkeys and some battery update functions to stop working, reboot is required to fix it. A common issue on E-Series and L-series ThinkPad
-  - After some testing, this seems to be a firmware issue
+  - After some testing, I can safely assume that this is a firmware issue, Linux seems to have already figured out a way to workaround this but I don't have the time to find how they did it.
   - Current workaround:
     - Use Karabiner: `karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/null2264/ThinkPad-L460-OpenCore/master/Include/karabiner.json`  
       This config map Ctrl+F<1-12> into the function of FN+F<1-12>:
