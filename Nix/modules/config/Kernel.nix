@@ -52,6 +52,7 @@
       "WhateverGreen.kext".Enabled = true;
       "YogaSMC.kext".Enabled = true;  # ThinkPad hotkeys, battery settings, fan settings, etc.
 
+      # REF: https://github.com/VoodooSMBus/VoodooRMI?tab=readme-ov-file#installation
       # Explicitly disable these kexts because "enable plugin recursively" is enabled
       "VoodooPS2Controller.kext/VoodooInput.kext".Enabled = false;  # We'll be using VoodooRMI's VoodooInput instead.
       "VoodooPS2Controller.kext/VoodooPS2Mouse.kext".Enabled = false;  # Probably useful? Not sure, will test it later
