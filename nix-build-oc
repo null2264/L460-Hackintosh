@@ -7,4 +7,4 @@ configFile="./Nix/include/config.nix"
 args="$@"
 [ -f ${configFile} ] && args="--override-input configFile path:${configFile} $args"
 
-nix build ./flake.nix#opencoreConfigurations.${flakeAttr} $args
+nix build .#opencoreConfigurations.${flakeAttr} $args
