@@ -49,10 +49,10 @@
 
 - Optional: Before doing anything, be sure to generate your own USB mapping using [USBToolBox](https://github.com/USBToolBox/tool) and store the Kext somewhere, just in case your laptop mapping different from mine
 - Follow [Dortania guide](https://dortania.github.io/) to create macOS installer
-- On "Setting up the EFI" part, drop the `EFI/` from this repo to your installer's EFI partition
-- Rename `Config.public.plist` to `Config.plist`
-  - Optional: follow [Dortania guide's PlatformInfo section](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#platforminfo) (Mainly for `MLB`, `SystemSerialNumber`, and `SystemUUID`, not really needed just yet)
-  - Optiona: drop your `UTBMap.kext` into `EFI/OC/Kexts` directory
+- Run `nix-build-oc`, the EFI will be generated inside a new directory named `result`
+  - Optional: follow [Dortania guide's PlatformInfo section](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#platforminfo) to get `MLB`, `SystemSerialNumber`, and `SystemUUID` value and follow the guide inside [`Nix/include`](./Nix/include/README.md)
+  - Optional: Replace the Kext `UTBMap.kext` and `CPUFriendDataProvider` in `Include/PlugIns` directory with your own
+- On "Setting up the EFI" part, drop the `EFI/` from `result` directory to your installer's EFI partition
 - Boot to USB and Install macOS
 - Now you can try `Post-Install` section's config, all of them are optional but could be useful (especially if you want to Apple Services such as iMessage)
 
@@ -70,12 +70,9 @@ Config to allow you to use Apple Services (such as iMessage)
 
 1. Download (or clone) [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) and run it in terminal
 2. Type `3` to generate SMBIOS, then press <kbd>Enter</kbd>
-3. Type `MacBookPro14,1 5`, then press <kbd>Enter</kbd>
-4. Open `EFI/Config.plist` (I highly recommend using [ProperTree](https://github.com/corpnewt/ProperTree)) and navigate to `PlatformInfo -> Generic`
-5. Add one of the script's result to `MLB`, `SystemSerialNumber`, and `SystemUUID`
-7. Replace `ROM` with your MAC Address (`System Preferences -> Network -> Ethernet -> Advanced -> Hardware -> MAC Address`, then remove all the colons `:`). Or you can also try using a real Apple MAC Address
-8. Save and Reboot
-9. Check the Serial Number validity. Repeat step 5 and choose different result (or generate new set of SMBIOS) until you find invalid Serial Number
+3. Type `MacBookPro14,1 5`, then press <kbd>Enter</kbd>, search for invalid serial number
+4. Follow the guide in [`Nix/include`](./Nix/include/README.md)
+5. Rebuild the EFI then reboot
 
 ### Disable S3/S4
 
