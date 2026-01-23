@@ -85,6 +85,7 @@ in {
       ACPIFolders = [ ../../Patches ];
       KextsFolders = [ ../../Kexts ];
       DriversFolders = [ ../../Drivers ];
+      ResourcesFolders = [ ../../Include/Resources ];
       packages = [
         pkgs.oc.lilu.latest
         #pkgs.oc.airportitlwm.latest-ventura
