@@ -27,6 +27,7 @@ in {
   kexts.intel-bluetooth-firmware = {
     enable = true;
     includeBlueToolFixup = true;
+    package = pkgs.oc.intel-bluetooth-firmware.nightly;
   };
 
   kexts.intel-mausi = {
@@ -86,8 +87,8 @@ in {
       DriversFolders = [ ../../Drivers ];
       packages = [
         pkgs.oc.lilu.latest
-        pkgs.oc.airportitlwm.latest-ventura
-        #pkgs.oc.itlwm.latest
+        #pkgs.oc.airportitlwm.latest-ventura
+        pkgs.oc.itlwm.latest
         pkgs.oc.applemcereporterdisabler
         pkgs.oc.brightnesskeys.latest
         pkgs.oc.cputscsync.latest
@@ -95,7 +96,6 @@ in {
         pkgs.oc.debugenhancer.latest
         pkgs.oc.ecenabler.latest
         pkgs.oc.hibernationfixup.latest
-        pkgs.oc.intel-bluetooth-firmware.latest
         pkgs.oc.restrictevents.latest
         pkgs.oc.voltageshift.latest
         pkgs.oc.voodoops2controller.latest

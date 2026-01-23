@@ -4,7 +4,6 @@
   oceanix.opencore.settings.Kernel = {
     Add = {
       "Lilu.kext".Enabled = true;
-      "AirportItlwm.kext".Enabled = true;
       "AppleALC.kext".Enabled = true;
       # Only needed for Monterey or newer.
       "AppleMCEReporterDisabler.kext" = {
@@ -37,6 +36,8 @@
       };
       # Recommended by the docs, but apparently not actually required? REF: https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#intelbtpatcher
       "IntelBTPatcher.kext".Enabled = true;
+      # AirportItlwm is basically dead, let's use itlwm+HeliPort instead.
+      "itlwm.kext".Enabled = true;
       "RestrictEvents.kext".Enabled = true;  # Prevent some issue caused by macOS events, especially for updates
       "SMCBatteryManager.kext".Enabled = true;
       "SMCProcessor.kext".Enabled = true;

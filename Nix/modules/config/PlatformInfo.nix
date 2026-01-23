@@ -15,8 +15,7 @@ in {
       SystemSerialNumber = if serialNumber == "" then "W00000000001" else serialNumber;
       SystemUUID = if systemUUID == "" then "00000000-0000-0000-0000-000000000000" else systemUUID;
       ROM = mkData "VOGtP43i";  # NOTE: Recommended to be changed to your own MAC Address
-      # Change this to MacBookPro16,3 for Sonoma support
-      SystemProductName = "MacBookPro14,2";
+      SystemProductName = "MacBookPro14,1";
     };
   };
 }
