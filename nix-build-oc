@@ -3,8 +3,9 @@ system="$(nix eval --impure --raw --expr 'builtins.currentSystem')"
 flakeAttr="l460.$system.efiPackage"
 
 # REF: https://github.com/ggPeti/param-pkg/issues/1
-configFile="./Nix/include/config.nix"
+pathToConfig="./Nix/include/config.nix"
 args="$@"
-[ -f ${configFile} ] && args="--override-input configFile path:${configFile} $args"
+[ -f ${pathToConfig} ] || pathToConfig="$(nix store add ./Nix/include/sample.nix -n sampleConfig.nix)"
+args="--override-input configFile path:${pathToConfig} $args"
 
 nix build .#opencoreConfigurations.${flakeAttr} $args
