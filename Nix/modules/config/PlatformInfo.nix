@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, params, ... }:
 
 with lib.oc.plist;
 
@@ -11,9 +11,9 @@ let
 in {
   oceanix.opencore.settings.PlatformInfo = {
     Generic = {
-      MLB = if mlb == "" then "M0000000000000001" else mlb;
-      SystemSerialNumber = if serialNumber == "" then "W00000000001" else serialNumber;
-      SystemUUID = if systemUUID == "" then "00000000-0000-0000-0000-000000000000" else systemUUID;
+      MLB = params.MLB;
+      SystemSerialNumber = params.SystemSerialNumber;
+      SystemUUID = params.SystemUUID;
       ROM = mkData "VOGtP43i";  # NOTE: Recommended to be changed to your own MAC Address
       SystemProductName = "MacBookPro14,1";
     };

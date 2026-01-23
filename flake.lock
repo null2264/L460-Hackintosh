@@ -1,5 +1,18 @@
 {
   "nodes": {
+    "configFile": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-ay4Au6YRKybRE1eetxlf4eCCt4uRUCf3LoL/MpkO+10=",
+        "path": "./Nix/include/sample.nix",
+        "type": "path"
+      },
+      "original": {
+        "path": "./Nix/include/sample.nix",
+        "type": "path"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1735651292,
@@ -41,6 +54,7 @@
     },
     "root": {
       "inputs": {
+        "configFile": "configFile",
         "nixpkgs": "nixpkgs",
         "oceanix": "oceanix",
         "utils": "utils"
