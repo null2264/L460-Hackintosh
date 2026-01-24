@@ -35,6 +35,11 @@ in {
     type = "temperate";
   };
 
+  kexts.itlwm = {
+    inherit (params) wifiProfiles;
+    enable = true;
+  };
+
   kexts.usbtoolbox = {
     enable = true;
     mapping = ../../Include/PlugIns/UTBMap.kext;
@@ -89,7 +94,7 @@ in {
       packages = [
         pkgs.oc.lilu.latest
         #pkgs.oc.airportitlwm.latest-ventura
-        pkgs.oc.itlwm.latest
+        #pkgs.oc.itlwm.latest
         pkgs.oc.applemcereporterdisabler
         pkgs.oc.brightnesskeys.latest
         pkgs.oc.cputscsync.latest
