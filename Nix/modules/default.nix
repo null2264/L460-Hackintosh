@@ -36,8 +36,14 @@ in {
   };
 
   kexts.itlwm = {
-    inherit (params) wifiProfiles;
     enable = true;
+    # This allow itlwm to auto connect to a wifi without HeliPort's help
+    wifiProfiles = (params.wifiProfiles or [
+      {
+        ssid = "dingus";
+        password = "dingus12345678";
+      }
+    ]);
   };
 
   kexts.usbtoolbox = {
