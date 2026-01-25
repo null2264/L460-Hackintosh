@@ -38,11 +38,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769322571,
-        "narHash": "sha256-nArjpSNdrSTkXZ0WJ3ZCud50oQgh0k6fBkHliHYWZ7E=",
+        "lastModified": 1769325239,
+        "narHash": "sha256-JdlcEcIiQ5txcI9uRjbImHIsyzgqyXYKrSAD+adr5OQ=",
         "owner": "null2264",
         "repo": "oceanix",
-        "rev": "97f92127351267d4a2d917457ce022f2eb08cfa7",
+        "rev": "c0e1c2d4ad9510045317ea5948b1423f317dd9bb",
         "type": "github"
       },
       "original": {

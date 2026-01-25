@@ -28,6 +28,10 @@
       "ECEnabler.kext".Enabled = true;
       "HibernationFixup.kext".Enabled = true;
       "HoRNDIS.kext".Enabled = true;  # (Android) USB Tethering support
+
+      # To fix OTA updates on macOS 14.4+
+      "iBridged.kext".Enabled = true;
+
       "IntelBluetoothFirmware.kext".Enabled = true;
       # Not needed for Monterey or newer, BlueToolFixup is needed instead
       "IntelBluetoothInjector.kext" = {

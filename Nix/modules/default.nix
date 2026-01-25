@@ -106,6 +106,7 @@ in {
         pkgs.oc.debugenhancer
         pkgs.oc.ecenabler
         pkgs.oc.hibernationfixup
+        pkgs.oc.ibridged
         pkgs.oc.restrictevents
         pkgs.oc.voltageshift
         pkgs.oc.voodoops2
