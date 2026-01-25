@@ -11,7 +11,7 @@ with lib.oc.plist;
         Count = 0;
         Enabled = true;
         Find = mkData "AFAAbABhAHQAZgBvAHIAbQBTAHUAcABwAG8AcgB0AC4AcABsAGkAcwB0";
-        Identifir = "Apple";
+        Identifier = "Apple";
         Limit = 0;
         Mask = mkData "";
         Replace = mkData "AC4ALgAuAC4ALgAuAC4ALgAuAC4ALgAuAC4ALgAuAC4ALgAuAC4ALgAu";
