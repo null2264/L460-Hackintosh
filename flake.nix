@@ -21,12 +21,12 @@
 
   inputs =
   {
-    nixpkgs.url = "github:nixos/nixpkgs/release-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/release-25.11";
 
     utils.url = "github:numtide/flake-utils";
 
     oceanix = {
-      url = "github:null2264/oceanix";
+      url = "github:null2264/oceanix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.utils.follows = "utils";
     };

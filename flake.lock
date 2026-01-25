@@ -3,28 +3,27 @@
     "configFile": {
       "flake": false,
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-Rqhwy8/7ON9UJI+9UYgVfwaI5rHqtcGxHl/fSraJoG8=",
         "path": "./Nix/include/sample.nix",
         "type": "path"
       },
       "original": {
         "path": "./Nix/include/sample.nix",
         "type": "path"
-      }
+      },
+      "parent": []
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1735651292,
-        "narHash": "sha256-YLbzcBtYo1/FEzFsB3AnM16qFc6fWPMIoOuSoDwvg9g=",
-        "owner": "nixos",
+        "lastModified": 1769318308,
+        "narHash": "sha256-Mjx6p96Pkefks3+aA+72lu1xVehb6mv2yTUUqmSet6Q=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "0da3c44a9460a26d2025ec3ed2ec60a895eb1114",
+        "rev": "1cd347bf3355fce6c64ab37d3967b4a2cb4b878c",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "release-24.05",
+        "owner": "NixOS",
+        "ref": "release-25.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -39,15 +38,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1769317370,
-        "narHash": "sha256-7nqMk8w4N78WY4UnHyulLtKGMJcJ8/PX1Tu0RLjyxFg=",
+        "lastModified": 1769322571,
+        "narHash": "sha256-nArjpSNdrSTkXZ0WJ3ZCud50oQgh0k6fBkHliHYWZ7E=",
         "owner": "null2264",
         "repo": "oceanix",
-        "rev": "e5530e5755fe033d3bbf4c96c59eb8219d4ca11b",
+        "rev": "97f92127351267d4a2d917457ce022f2eb08cfa7",
         "type": "github"
       },
       "original": {
         "owner": "null2264",
+        "ref": "release-25.11",
         "repo": "oceanix",
         "type": "github"
       }
