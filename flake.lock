@@ -4,7 +4,7 @@
       "flake": false,
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-xnALVLBxA7R7lmuh1y2UoqZHS3iJL09awGnaegO1kTE=",
+        "narHash": "sha256-Rqhwy8/7ON9UJI+9UYgVfwaI5rHqtcGxHl/fSraJoG8=",
         "path": "./Nix/include/sample.nix",
         "type": "path"
       },
@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769219120,
-        "narHash": "sha256-g/cAG48c3XyW9OqvzDo66LTgCC77OLT6qI9CC7oHkYA=",
+        "lastModified": 1769317370,
+        "narHash": "sha256-7nqMk8w4N78WY4UnHyulLtKGMJcJ8/PX1Tu0RLjyxFg=",
         "owner": "null2264",
         "repo": "oceanix",
-        "rev": "1cf60a343266645cf66fecec18b21debe0c0c239",
+        "rev": "e5530e5755fe033d3bbf4c96c59eb8219d4ca11b",
         "type": "github"
       },
       "original": {

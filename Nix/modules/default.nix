@@ -27,7 +27,6 @@ in {
   kexts.intel-bluetooth-firmware = {
     enable = true;
     includeBlueToolFixup = true;
-    package = pkgs.oc.intel-bluetooth-firmware.nightly;
   };
 
   kexts.intel-mausi = {
@@ -79,7 +78,7 @@ in {
           "OpenControl.efi"
           "OpenShell.efi"
         ];
-      in pkgs.oc.opencore.latest.overrideAttrs (old: {
+      in pkgs.oc.opencore.overrideAttrs (old: {
         installPhase = ''
           find ./${cfg.opencore.arch}/EFI/OC/Drivers -type f -iname "*.efi" \! \( -iname ${builtins.concatStringsSep " -o -iname " driversToKeep} \) -exec rm -r \{\} +
           find ./${cfg.opencore.arch}/EFI/OC/Tools -type f -iname "*.efi" \! \( -iname ${builtins.concatStringsSep " -o -iname " toolsToKeep} \) -exec rm -r \{\} +
@@ -98,21 +97,20 @@ in {
       DriversFolders = [ ../../Drivers ];
       ResourcesFolders = [ ../../Include/Resources ];
       packages = [
-        pkgs.oc.lilu.latest
+        pkgs.oc.lilu
         #pkgs.oc.airportitlwm.latest-ventura
-        #pkgs.oc.itlwm.latest
         pkgs.oc.applemcereporterdisabler
-        pkgs.oc.brightnesskeys.latest
-        pkgs.oc.cputscsync.latest
+        pkgs.oc.brightnesskeys
+        pkgs.oc.cputscsync
         pkgs.oc.ctlnaahciport
-        pkgs.oc.debugenhancer.latest
-        pkgs.oc.ecenabler.latest
-        pkgs.oc.hibernationfixup.latest
-        pkgs.oc.restrictevents.latest
-        pkgs.oc.voltageshift.latest
-        pkgs.oc.voodoops2controller.latest
-        pkgs.oc.voodoormi.latest
-        pkgs.oc.whatevergreen.latest
+        pkgs.oc.debugenhancer
+        pkgs.oc.ecenabler
+        pkgs.oc.hibernationfixup
+        pkgs.oc.restrictevents
+        pkgs.oc.voltageshift
+        pkgs.oc.voodoops2
+        pkgs.oc.voodoormi
+        pkgs.oc.whatevergreen
       ];
     };
   };
