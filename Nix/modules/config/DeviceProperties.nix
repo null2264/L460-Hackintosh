@@ -16,14 +16,12 @@ with lib.oc.plist;
         # Fix glitches after spoofing SKL to KBL
         # REF: https://github.com/acidanthera/bugtracker/issues/2088#issuecomment-1381357651
         "AAPL,GfxYTile" = mkData "AQAAAA==";
-        "AAPL,ig-platform-id" = mkData "AAAWWQ==";
+        "AAPL,ig-platform-id" = mkData "AAAbWQ==";
         "device-id" = mkData "FlkAAA==";
         # >> Spoofing SKL to KBL
 
         framebuffer-con1-enable = mkData "AQAAAA==";
-        framebuffer-con1-type = mkData "AAQAAA==";
-        framebuffer-con2-enable = mkData "AQAAAA==";
-        framebuffer-con2-type = mkData "AAQAAA==";
+        framebuffer-con1-alldata = mkData "AQUJAAAIAACHAQAA";
         framebuffer-fbmem = mkData "AACQAA==";
         framebuffer-patch-enable = mkData "AQAAAA==";
         framebuffer-stolenmem = mkData "AAAwAQ==";
