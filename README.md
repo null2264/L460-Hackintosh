@@ -283,8 +283,10 @@ perez987. The guide is a bit confusing to navigate through, but the key points a
     - Using HiDPI
     - Connect to an external monitor (Maybe because my monitor's (native) resolution is under 1080, I don't have a 1080p monitor so I can't test it further)
     - Using resolution higher or lower than the internal monitor native resolution
-  - KabyLake's color-banding issue, the only fixes related to this require spoofing GPU to SkyLake (My external monitor doesn't have this issue, so maybe it's hardware)
-    - Some says injecting fake EDID could fix this issue, but it doesn't work for me
+  - KabyLake's color-banding issue, can caused by various reasons, fixes:
+    - Your current inbuilt monitor probably doesn't support the full ARGB8888, upgrading your monitor is the only fix
+    - If you don't want to upgrade your monitor, the only fix is to NOT spoof to KabyLake and use something like OCLP to add Skylake support back
+    - Some says injecting fake EDID could fix this issue, but it doesn't work for some people
 - Restart + S3/S4 Sleep + Shutdown
 - Audio + Combo Jack (using [OpenALC](https://github.com/acidanthera/AppleALC))
 - Brightness (and brightness control hotkeys)
